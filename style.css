@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto');
+
+:root { 
+	--color-primary:    #1b4965; 
+	--color-secondary:  #2B78A1; 
+	--color-accent:     #cae9ff; 
+	--color-text1:      #ffffff; 
+	--color-text2:      #cae9ff; 
+	--color-muted:      #666666; 
+	--color-surface:    #f5f4f0;
+	--font-heading:     'Roboto'; 
+	--font-body:        'Roboto'; 
+	--space-small:       0.5rem; 
+	--space-medium:      1.5rem; 
+	--space-large:       3rem; 
+	--zero-value:			0;
+}
+
+/* reset block */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-size: 62.5%;
+}
+
+body {
+	color: #353535;
+	background-color: var(--color-accent);
+	font-family: var(--font-body);
+}
+
+.main-header  {
+	background-color: var(--color-primary);
+	padding: var(--space-large);
+	color: var(--color-secondary);
+}
+
+.main-header h1 {
+	font-family: var(--font-heading);
+	font-size: 2.5rem; 
+	line-height: 2rem;	
+	color: var(--color-text1);
+}
+
+.main-header p {
+	font-family: var(--font-heading);
+	font-size: 2rem;
+	line-height: 3rem;	
+	color: var(--color-text2);
+}
+
+nav {
+	font-family: var(--font-heading);
+	background-color: var(--color-secondary);
+	font-size: 1.75rem;
+	padding: var(--space-medium);
+	color: var(--color-text1);
+}
+
+a:link, a:visited {
+	color: #ffffff;
+	font-weight: normal;
+}
+
+a:hover {
+	color: #FFA600;
+	font-weight: bold;
+}
+
+a:active {
+	color: #FFA600;
+	font-weight: bold;
+}
+
+.main-footer {
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	background-color: #ffffff;
+	padding: var(--space-medium);
+	align-items: bottom;
+}
+
+.main-footer p {
+	font-family: var(--font-heading);
+	font-size: 1rem;	
+	line-height: 3rem;
+	color: #000000;
+}
+
+address {
+	font-family: var(--font-heading);
+	font-size: 1rem;
+}
+
+
+/* about me */
+.main-about {
+	padding-left: 1rem;
+	padding-top: 1rem;
+}
+
+.main-about h1 {
+	font-size: 2.5rem;
+}
+
+.main-about small {
+	font-size: 1.25rem;
+}
+
+.main-about h2 {
+	font-size: 1.75rem;
+	line-height: 3rem;
+}
+
+.main-about p, i, blockquote {
+	font-size: 1.5rem;
+}
