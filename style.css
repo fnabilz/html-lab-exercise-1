@@ -1,9 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto');
 
+/* ============================================ 
+BREAKPOINTS 
+mobile-first base: 320px and up (default) 
+tablet:   @media (min-width: 600px) 
+desktop:  @media (min-width: 1024px) 
+============================================ */ 
+/* --- Base styles (mobile) --- */ 
+.card-grid { 
+	display: grid; 
+	grid-template-columns: 1fr; 
+	gap: var(--space-md); 
+} 
+
+@media (min-width: 600px) { 
+	.card-grid { grid-template-columns: repeat(2, 1fr); } 
+} 
+@media (min-width: 1024px) { 
+	.card-grid { grid-template-columns: repeat(3, 1fr); } 
+}
+
 :root { 
 	--color-primary:    #1b4965; 
 	--color-secondary:  #2B78A1; 
-	--color-accent:     #cae9ff; 
+	--color-background: #cae9ff; 
+	--color-shadow:		#a1bccf;
+	--color-textB:      #353535;
 	--color-text1:      #ffffff; 
 	--color-text2:      #cae9ff; 
 	--color-muted:      #666666; 
@@ -25,8 +47,8 @@
 }
 
 body {
-	color: #353535;
-	background-color: var(--color-accent);
+	color: var(--color-textB);
+	background-color: var(--color-background);
 	font-family: var(--font-body);
 }
 
@@ -34,6 +56,7 @@ body {
 	background-color: var(--color-primary);
 	color: var(--color-secondary);
 	padding: var(--space-large);
+	align-items: center;
 	/* use padding to create space inside an element border */
 }
 
@@ -53,27 +76,63 @@ body {
 	/* use padding to create space between elements */
 }
 
-nav {
+.main-nav {
 	font-family: var(--font-heading);
 	background-color: var(--color-secondary);
-	font-size: 1.75rem;
-	margin: var(--space-small);
+	color: var(--color-text1);
+	box-shadow: 0px 3px #215470;
+
+	margin: 0;
 	/* use margin to create space outside an element border */
 	padding: var(--space-medium);
 	/* also use padding to create space between elements */
-	color: var(--color-text1);
-	border-radius: 1rem;
-	box-shadow: 0px 3px #215470;
+
+	list-style: none;
+	display: flex;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+	gap: 5px;
+
+	position: sticky;
+	top: 0;
+	z-index: 1;
+}
+
+.main-index {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	gap: 1.5rem;
+}
+
+.main-skills {
+	display: grid;
+	grid-template-columns: 1fr 280px;
+	grid-template-rows: 1fr 280px;
+	gap: 1.5rem;
+	grid-column: span 2;
+}
+
+nav a {
+	font-size: 1.25rem;
+	text-decoration: none;
+	margin-right: 15px;
+}
+
+nav a.active {
+	color: #FFA600;
+	font-weight: bold;
 }
 
 a:link, a:visited {
 	color: #ffffff;
-	font-weight: normal;
+	font-weight: bold;
 }
 
 a:hover {
 	color: #FFA600;
 	font-weight: bold;
+
+	transition: color 0.2s, background-color 0.2s;
 }
 
 a:active {
@@ -103,29 +162,70 @@ address {
 	font-size: 1rem;
 }
 
-
-/* about me */
-.main-about {
-	padding-left: 1rem;
-	padding-top: 1rem;
+section {
+	margin: var(--space-medium);
+	background-color: #ffffff;
+	border-radius: 1rem;
+	box-shadow: 0px 3px #215470;
 }
 
-h1 {
+section:hover {
+	transform: translateY(-4px);
+	transition: transform 0.2s;
+}
+
+main h1 {
 	font-size: 2.5rem;
 	line-height: 3rem;
+	padding: 10px;
 }
 
-small {
+main small {
 	font-size: 1.25rem;
-	line-height: 2rem;
+	line-height: 3rem;
+	margin-left: 10px;
 }
 
-h2 {
+main h2 {
 	font-size: 1.75rem;
 	line-height: 2rem;
+	margin: 10px;
 }
 
-p, i, blockquote {
+main p, i, blockquote, cite, strong, b, abbr, dt, dd, figure, figcaption {
 	font-size: 1.5rem;
 	line-height: 2rem;
+	margin: 5px;
+}
+
+main mark {
+	font-size: 1.5rem;
+	line-height: 2rem;
+	background-color: #FFA600;
+	margin: 5px; 
+}
+
+li {
+	font-size: 1.5rem;
+	line-height: 1rem;
+	margin: 20px;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.skills_nav {
+	font-family: var(--font-heading);
+	color: #000000;
+
+	margin: 0;
+	/* use margin to create space outside an element border */
+	padding: var(--space-small);
+	/* also use padding to create space between elements */
+}
+
+.skills_nav a {
+	color: #000000;
 }

@@ -4,6 +4,7 @@
 		<title> Portfolio </title>
 		<meta charset="UTF-8">
 		<meta name="description" content="About me">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="style.css">
 	</head>
 <body>
@@ -11,17 +12,20 @@
 		<h1>Ahmad Fikri Nabil bin Zamri</h1>
 		<p>Future Software Engineer</p>
 	</header>
-	<nav>
-		<a href="index.html">Home</a> |
-		<a href="about.html">About Me</a> |
-  		<a href="skills.html">Skills</a> |
-  		<a href="projects.html">Projects</a> |
+	<nav class="main-nav">
+		<a href="index.html">Home</a>
+		<a href="about.html" class="active">About Me</a>
+  		<a href="skills.html">Skills</a>
+  		<a href="projects.html">Projects</a>
   		<a href="academic.html">Academic</a>
+  		<a href="contact.html">Contact</a>
 	</nav>
 	<main>
-		<section class="main-about"> 
+		<section>
 			<h1>About Me</h1>
 			<small>Author: Fikri, Last updated: 25/3/2026</small><br>
+		</section>
+		<section> 
 			<h2>Introduction</h2>
 			<p>
 				<i>Assalamualaikum and Hi everyone</i><br>
@@ -35,6 +39,8 @@
 				I enjoy most of my free time <mark>playing video games</mark>.<br>
 				My favourite food is <mark>Tom Yum</mark> and my favourite drink is <mark>Teh Tarik</mark>.<br>
 			</p>
+		</section>
+		<section>
 			<h2>Favourite Quote</h2>
 			<blockquote cite="https://quran.com/ms/al-baqarah/286">"Allah does not require of any soul more than what it can afford..."</blockquote><cite>Quran 2:286</cite><br>
 			<p>
@@ -48,7 +54,6 @@
 				Then on the 2<sup>nd</sup> year, I also studied about Data Structures and Algorithm, Software Requirements Engineering and Operating Systems.<br>
 				Some of the knowledge that I have learnt so far were finite automata where I learnt about the states (q<sub>1</sub>,q<sub>2</sub>,...), time complexity (O(n), O(n log n), ...) and electronic circuits (AND, NAND, XOR, ...)<br>
 			</p>
-
 		</section>
 	</main>
 	<footer class="main-footer">

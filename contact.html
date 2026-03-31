@@ -4,84 +4,104 @@
 		<title> Portfolio </title>
 		<meta charset="UTF-8">
 		<meta name="description" content="Contacts">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="style.css">
 	</head>
 <body>
-	<header>
-		<h1>Contact Me</h1>
+	<header class="main-header">
+		<h1>Ahmad Fikri Nabil bin Zamri</h1>
+		<p>Future Software Engineer</p>
 	</header>
+	<nav class="main-nav">
+		<a href="index.html">Home</a>
+		<a href="about.html">About Me</a>
+  		<a href="skills.html">Skills</a>
+  		<a href="projects.html">Projects</a>
+  		<a href="academic.html">Academic</a>
+  		<a href="contact.html" class="active">Contact</a>
+	</nav>
 	<main>
-		<form action="#" method="post">
-			<fieldset>
-				<legend>Personal info:</legend>
+		<section>
+			<h1>Contact Me</h1>
+			<form action="#" method="post">
+				<fieldset>
+					<legend>Personal info:</legend>
 
-				<label for="name">Full name:</label>
-			    <input type="text" id="name" name="name" 
-			    	required
-			    	maxlength="50"><br><br>
+					<label for="name">Full name:</label>
+				    <input type="text" id="name" name="name" 
+				    	required
+				    	maxlength="50"><br><br>
 
-			    <label for="email">Email:</label>
-			    <input type="email" id="email" name="email"
-			    	required
-			    	maxlength="30"><br><br>
+				    <label for="email">Email:</label>
+				    <input type="email" id="email" name="email"
+				    	required
+				    	maxlength="30"><br><br>
 
-				<label for="age">Age:</label>
-				<input type="number" id="age" name="age"
-					required 
-					min="5"
-					max="90"
-					placeholder="5-90"><br><br>
+					<label for="age">Age:</label>
+					<input type="number" id="age" name="age"
+						required 
+						min="5"
+						max="90"
+						placeholder="5-90"><br><br>
 
-				<label for="telephone">Contact No:</label>
-				<input type="tel" id="telephone" name="telephone"
-					required 
-					maxlength="11"><br><br>
+					<label for="telephone">Contact No:</label>
+					<input type="tel" id="telephone" name="telephone"
+						required 
+						maxlength="11"><br><br>
 
-				<label for="birthdate">Birthday:</label>
-				<input type="date" id="birthdate" name="birthdate"
-					required><br><br>  
+					<label for="birthdate">Birthday:</label>
+					<input type="date" id="birthdate" name="birthdate"
+						required><br><br>  
 
-			    <p>Relationship:</p>
-				<input type="checkbox" id="single" name="relationship" value="Single">
-				<label for="single"> Single</label><br>
-				<input type="checkbox" id="married" name="relationship" value="Married">
-				<label for="married"> Married</label><br>
-				<input type="checkbox" id="divorce" name="relationship" value="Divorced">
-				<label for="divorce"> Divorced</label><br>
+				    <p>Relationship:</p>
+					<input type="checkbox" id="single" name="relationship" value="Single">
+					<label for="single"> Single</label><br>
+					<input type="checkbox" id="married" name="relationship" value="Married">
+					<label for="married"> Married</label><br>
+					<input type="checkbox" id="divorce" name="relationship" value="Divorced">
+					<label for="divorce"> Divorced</label><br>
 
-				<p>Location:</p>
-				<input type="radio" id="home" name="location" value="Home">
-				<label for="home">Home</label><br>
-				<input type="radio" id="work" name="location" value="Workplace">
-				<label for="work">Workplace</label><br>
-				<input type="radio" id="college" name="location" value="College">
-				<label for="college">College</label>
-			</fieldset><br>
+					<p>Location:</p>
+					<input type="radio" id="home" name="location" value="Home">
+					<label for="home">Home</label><br>
+					<input type="radio" id="work" name="location" value="Workplace">
+					<label for="work">Workplace</label><br>
+					<input type="radio" id="college" name="location" value="College">
+					<label for="college">College</label>
+				</fieldset><br>
 
-			<fieldset>
-				<legend>Message:</legend>
-				<label for="subject">Subject:</label>
-				<select  name="subject" id="subject">
-				  <optgroup label="Personal">
-				    <option value="family">About my family</option>
-				    <option value="address">My address</option>
-				  </optgroup>
-				  <optgroup label="Favourites">
-				    <option value="food">Food</option>
-				    <option value="games">Games</option>
-				  </optgroup>
-				</select><br>
+				<fieldset>
+					<legend>Message:</legend>
+					<label for="subject">Subject:</label>
+					<select  name="subject" id="subject">
+					  <optgroup label="Personal">
+					    <option value="family">About my family</option>
+					    <option value="address">My address</option>
+					  </optgroup>
+					  <optgroup label="Favourites">
+					    <option value="food">Food</option>
+					    <option value="games">Games</option>
+					  </optgroup>
+					</select><br>
 
-				<label for="description">Description:</label><br>
-				<textarea id="description" name="description" rows="5" cols="30"
-					maxlength="250">
-				</textarea>
-			</fieldset><br>
+					<label for="description">Description:</label><br>
+					<textarea id="description" name="description" rows="5" cols="30"
+						maxlength="250">
+					</textarea>
+				</fieldset><br>
 
-			<input type="submit" value="Submit">
-		</form>
+				<input type="submit" value="Submit">
+			</form>
 
+		</section>
 	</main>
-	<footer>
+	<footer class="main-footer">
+		<p>Contact Information</p>
+		<address>
+			Email: nabilzamzak@gmail.com <br>
+			Phone No: +60193845385 <br>
+			Social Media: @fnabilz <br>
+		</address>
 	</footer>
 </body>
 </html>
