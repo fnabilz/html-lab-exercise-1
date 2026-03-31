@@ -1,25 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto');
 
-/* ============================================ 
-BREAKPOINTS 
-mobile-first base: 320px and up (default) 
-tablet:   @media (min-width: 600px) 
-desktop:  @media (min-width: 1024px) 
-============================================ */ 
-/* --- Base styles (mobile) --- */ 
-.card-grid { 
-	display: grid; 
-	grid-template-columns: 1fr; 
-	gap: var(--space-md); 
-} 
-
-@media (min-width: 600px) { 
-	.card-grid { grid-template-columns: repeat(2, 1fr); } 
-} 
-@media (min-width: 1024px) { 
-	.card-grid { grid-template-columns: repeat(3, 1fr); } 
-}
-
 :root { 
 	--color-primary:    #1b4965; 
 	--color-secondary:  #2B78A1; 
@@ -36,14 +16,6 @@ desktop:  @media (min-width: 1024px)
 	--space-medium:      1.5rem; 
 	--space-large:       3rem; 
 	--zero-value:			0;
-}
-
-/* reset block */
-* {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	font-size: 62.5%;
 }
 
 body {
@@ -91,6 +63,7 @@ body {
 	display: flex;
 	justify-content: flex-end;
 	flex-wrap: wrap;
+	flex-direction: column;
 	gap: 5px;
 
 	position: sticky;
@@ -192,7 +165,7 @@ main h2 {
 	margin: 10px;
 }
 
-main p, i, blockquote, cite, strong, b, abbr, dt, dd, figure, figcaption {
+main p, i, blockquote, cite, strong, b, abbr, dt, dd, figure, figcaption, caption {
 	font-size: 1.5rem;
 	line-height: 2rem;
 	margin: 5px;
@@ -216,6 +189,18 @@ img {
 	height: auto;
 }
 
+table {
+	width: 100%;
+	margin: 10px;
+}
+
+th, td {
+	font-size: 1.5rem;
+	line-height: 2rem;
+	margin: 5px;
+	text-align: center;
+}
+
 .skills_nav {
 	font-family: var(--font-heading);
 	color: #000000;
@@ -228,4 +213,34 @@ img {
 
 .skills_nav a {
 	color: #000000;
+}
+
+/* ============================================ 
+BREAKPOINTS 
+mobile-first base: 320px and up (default) 
+tablet:   @media (min-width: 600px) 
+desktop:  @media (min-width: 1024px) 
+============================================ */ 
+/* --- Base styles (mobile) --- */ 
+.card-grid { 
+	display: grid; 
+	grid-template-columns: 1fr; 
+	gap: var(--space-medium); 
+} 
+
+@media (min-width: 600px) { 
+	.card-grid { grid-template-columns: repeat(2, 1fr); } 
+	.main-nav { flex-direction: column;}
+} 
+@media (min-width: 1024px) { 
+	.card-grid { grid-template-columns: repeat(3, 1fr); } 
+	.main-nav { flex-direction: row;}
+}
+
+/* reset block */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-size: 62.5%;
 }
