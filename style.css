@@ -153,6 +153,14 @@ main h1 {
 	padding: 10px;
 }
 
+main h1::after {
+	content: '';
+	display: block;   
+    width: 4rem; 
+    height: .3rem;
+	background: var(--color-primary);
+}
+
 main small {
 	font-size: 1.25rem;
 	line-height: 3rem;
@@ -170,6 +178,38 @@ main p, i, blockquote, cite, strong, b, abbr, dt, dd, figure, figcaption, captio
 	line-height: 2rem;
 	margin: 5px;
 }
+
+fieldset {
+	margin: 1rem;
+	border-radius: .7rem;
+}
+
+legend, label, input, select, optgroup, option, textarea {
+	margin: 1rem;
+	padding: .5rem;
+	font-size: 1.5rem;
+}
+
+input, textarea, select {
+	border-radius: .5rem;
+	border: .1rem solid #000000;
+}
+
+input:focus, textarea:focus, select:focus {
+	box-shadow: 0px .5rem #215470;
+}
+
+input[type="submit"] {
+	transition: background-color 1s
+}
+
+input[type="submit"]:hover {
+	background-color: #FFA600;
+}
+input[type="submit"]:active {
+	transform: scale(.95);
+}
+
 
 main mark {
 	font-size: 1.5rem;
@@ -190,8 +230,8 @@ img {
 }
 
 table {
-	width: 100%;
-	margin: 10px;
+	width: 95%;
+	margin: 5px;
 }
 
 th, td {
@@ -199,6 +239,18 @@ th, td {
 	line-height: 2rem;
 	margin: 5px;
 	text-align: center;
+}
+
+thead tr:first-child {
+	background-color: var(--color-shadow);
+}
+
+tfoot tr:last-child {
+	background-color: var(--color-shadow);
+}
+
+tbody tr:nth-child(even) {
+	background-color: #FFA600;
 }
 
 .skills_nav {
